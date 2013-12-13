@@ -36,28 +36,33 @@ Game.prototype.initialize = function()
 }
 Game.prototype.update = function(playerP)
 {
-  $(".p1 > .p1x").text("X: " + player1.X);
-  $(".p1 > .p1l").text("Left: " + player1.Left);
-  $(".p1 > .p1r").text("Right: " + player1.Right);
-  $(".p1 > .p1f").text("Facing: " + player1.Facing);
-  $(".p1 > .p1a").text("isAttacking: " + player1.isAttacking);
-  $(".p1 > .p1hh").text("Health: " + player1.Health);
-  $(".p2hea").text(player2.Health);
-  $(".p1 > .p1d").text("isDodging: " + player1.isDodging);
+  /*
+    $(".p1 > .p1x").text("X: " + player1.X);
+    $(".p1 > .p1l").text("Left: " + player1.Left);
+    $(".p1 > .p1r").text("Right: " + player1.Right);
+    $(".p1 > .p1f").text("Facing: " + player1.Facing);
+    $(".p1 > .p1a").text("isAttacking: " + player1.isAttacking);
+    $(".p1 > .p1hh").text("Health: " + player1.Health);
+    $(".p2hea").text(player2.Health);
+    $(".p1 > .p1d").text("isDodging: " + player1.isDodging);
 
 
-	$(".p2 > .p2x").text("X: " + player2.X);
-  $(".p2 > .p2l").text("Left: " + player2.Left);
-  $(".p2 > .p2r").text("Right: " + player2.Right);
-  $(".p2 > .p2f").text("Facing: " + player2.Facing);
-  $(".p2 > .p2a").text("isAttacking: " + player2.isAttacking);
-  $(".p2 > .p2hh").text("Health: " + player2.Health);
-  $(".p1hea").text(player1.Health);
-  $(".p2 > .p2d").text("isDodging: " + player2.isDodging);
+  	$(".p2 > .p2x").text("X: " + player2.X);
+    $(".p2 > .p2l").text("Left: " + player2.Left);
+    $(".p2 > .p2r").text("Right: " + player2.Right);
+    $(".p2 > .p2f").text("Facing: " + player2.Facing);
+    $(".p2 > .p2a").text("isAttacking: " + player2.isAttacking);
+    $(".p2 > .p2hh").text("Health: " + player2.Health);
+    $(".p1hea").text(player1.Health);
+    $(".p2 > .p2d").text("isDodging: " + player2.isDodging);
 
 
-  $(".wLeft").text("Left: "+ windowObj.Left);
-  $(".wRight").text("Right: "+ windowObj.Right);
+    $(".wLeft").text("Left: "+ windowObj.Left);
+    $(".wRight").text("Right: "+ windowObj.Right);
+  */
+    $(".pone > .healthBar > .bar").css({
+      'width': player1.Health + "px"
+    });
   if (player1.moveDisabler === true){}
   else if(player1.moveDisabler === false)
   {

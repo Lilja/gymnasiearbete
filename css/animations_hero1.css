@@ -18,7 +18,7 @@
 }
 .hero1Attack1left
 {
-	background-image:url("../img/char/hero1/attack1_hero1_left.png");
+	background-image:url("../img/char/hero1/attack1_hero1_left1.png");
 	width: 100px;
 	height:  150px;
 	-webkit-animation: heroOneAttackOne_Left 0.5s steps(4);
@@ -109,7 +109,7 @@
 .hero1Walkleft
 {
 	background-image:url("../img/char/hero1/walk_hero1_left.png");
-	width: 101px;
+	width: 100px;
 	height:  150px;
 	-webkit-animation: heroOnewalk_left 0.5s steps(4);
 }
@@ -127,7 +127,7 @@
 .hero1Walkright
 {
 	background-image:url("../img/char/hero1/walk_hero1_right.png");
-	width: 105px;
+	width: 100px;
 	height:  150px;
 	-webkit-animation: heroOnewalk_right 0.5s steps(5);
 }
@@ -146,13 +146,13 @@
 {
 	background-image:url("../img/char/hero1/dodge_hero1_right.png");
 	background-position: 0px;
-	width: 105px;
+	width: 100px;
 	height:  150px;
 }
 .hero1Dodgeleft
 {
 	background-image:url("../img/char/hero1/dodge_hero1_left.png");
-	width: 105px;
+	width: 100px;
 	height:  150px;
 }
 	/*-webkit-animation: heroOneDodge_right 0.5s steps(1);
@@ -171,12 +171,12 @@
 .hero1Idleleft
 {
 	background-image:url("../img/char/hero1/idle_hero1_left1.png");
-	width: 105px;
+	width: 100px;
 	height:  150px;
 }
 .hero1Idleright
 {
 	background-image:url("../img/char/hero1/idle_hero1_right1.png");
-	width: 105px;
+	width: 100px;
 	height:  150px;
 }

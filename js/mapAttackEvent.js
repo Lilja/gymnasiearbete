@@ -90,7 +90,7 @@ if(!game.disabler)
                 {//collision!
                   if (!player2.isDodging)
                   {
-                    player1.Health--;
+                    player1.Health = player1.Health - 5;
                     timeSinceLastAttackP2 = Date.now();
                     
                   }
@@ -111,7 +111,7 @@ if(!game.disabler)
                 {//collision!
                   if (!player2.isDodging)
                   {
-                    player1.Health--;
+                     player1.Health = player1.Health - 4;
                     timeSinceLastAttackP2 = Date.now();
                     
                   }
@@ -132,7 +132,7 @@ if(!game.disabler)
                 {//collision!
                   if (!player2.isDodging)
                   {
-                    player1.Health--;
+                     player1.Health = player1.Health - 6;
                     timeSinceLastAttackP2 = Date.now();
                     
                   }

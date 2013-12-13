@@ -156,19 +156,6 @@
 	width: 105px;
 	height:  150px;
 }
-	/*-webkit-animation: heroOneDodge_right 0.5s steps(1);
-}/*
-@-webkit-keyframes heroOneDodge_right
-{
-	from
-	{
-		background-position: 505px;
-	}
-	to 
-	{
-		background-position: 0px;
-	}
-}*/
 .hero1Idleleft
 {
 	background-image:url("../img/char/hero1/idle_hero1_left1.png");
