@@ -1,0 +1,170 @@
+.hero2Attack1right
+{
+	background-image:url("../img/char/hero2/attack1_hero2_right1.png");
+	width: 150px;
+	height:  150px;
+	-webkit-animation: heroTwoAttackOne_Right 0.5s steps(3);
+}
+@-webkit-keyframes heroTwoAttackOne_Right
+{
+	from
+	{
+		background-position: 0px;
+	}
+	to 
+	{
+		background-position: 453px;
+	}
+}
+.hero2Attack1left
+{
+	background-image:url("../img/char/hero2/attack1_hero2_left1.png");
+	width: 150px;
+	height:  150px;
+	-webkit-animation: heroTwoAttackTwo_Left 0.5s steps(3);
+}
+@-webkit-keyframes heroTwoAttackTwo_Left
+{
+	from
+	{
+		background-position: 0px;
+	}
+	to 
+	{
+		background-position: 453px;
+	}
+}
+.hero2Attack2left
+{
+	background-image:url("../img/char/hero2/attack2_hero2_left1.png");
+	width: 150px;
+	height:  150px;
+	-webkit-animation: heroTwoAttackTwo_Left 0.5s steps(3);
+}
+@-webkit-keyframes heroTwoAttackTwo_Left
+{
+	from
+	{
+		background-position: 0px;
+	}
+	to 
+	{
+		background-position: 453px;
+	}
+}
+.hero2Attack2right
+{
+	background-image:url("../img/char/hero2/attack2_hero2_right1.png");
+	width: 150px;
+	height:  150px;
+	-webkit-animation: heroTwoAttackOne_Right 0.5s steps(3);
+}
+@-webkit-keyframes heroTwoAttackOne_Right
+{
+	from
+	{
+		background-position: 0px;
+	}
+	to 
+	{
+		background-position: 453px;
+	}
+}
+.hero2Attack3right
+{
+	background-image:url("../img/char/hero2/attack3_hero2_right1.png");
+	width: 150px;
+	height:  150px;
+	-webkit-animation: heroTwoAttackThree_Right 1s steps(5);
+}
+@-webkit-keyframes heroTwoAttackThree_Right
+{
+	from
+	{
+		background-position: 0px;
+	}
+	to 
+	{
+		background-position: 755px;
+	}
+}
+.hero2Attack3left
+{
+	background-image:url("../img/char/hero2/attack3_hero2_left1.png");
+	width: 150px;
+	height:  150px;
+	-webkit-animation: heroTwoAttackThree_Left 1s steps(5);
+}
+@-webkit-keyframes heroTwoAttackThree_Left
+{
+	from
+	{
+		background-position: 0px;
+	}
+	to 
+	{
+		background-position: 755px;
+	}
+}
+.hero2Idleleft
+{
+	background-image:url("../img/char/hero2/idle_hero2_left.png");
+	width: 150px;
+	height:  150px;
+}
+.hero2Idleright
+{
+	background-image:url("../img/char/hero2/idle_hero2_right.png");
+	width: 150px;
+	height:  150px;
+}
+.hero2Dodgeright
+{
+	background-image:url("../img/char/hero2/dodge_hero2_right1.png");
+	background-position: 0px;
+	width: 150px;
+	height:  150px;
+}
+.hero2Dodgeleft
+{
+	background-image:url("../img/char/hero2/dodge_hero2_left1.png");
+	width: 150px;
+	height:  150px;
+}
+.hero2Walkleft
+{
+	background-image:url("../img/char/hero2/walk_hero2_left1.png");
+	background-position: 0px;
+	width: 150px;
+	height:  150px;
+	-webkit-animation: heroTwowalk_left 0.5s steps(5);
+}
+@-webkit-keyframes heroTwowalk_left
+{
+	from
+	{
+		background-position: 0px;
+	}
+	to 
+	{
+		background-position: 755px;
+	}
+}
+.hero2Walkright
+{
+	background-image:url("../img/char/hero2/walk_hero2_right1.png");
+	width: 150px;
+	height:  150px;
+	-webkit-animation: heroTwowalk_right 0.5s steps(5);
+}
+@-webkit-keyframes heroTwowalk_right
+{
+	from
+	{
+		background-position: 0px;
+	}
+	to 
+	{
+		background-position: 755px;
+	}
+}

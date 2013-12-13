@@ -1,0 +1,38 @@
+.window {
+	margin: 0 auto;
+	margin-top: 10%;
+	width: 50%;
+	border: 1px solid black;
+	height: 500px;
+	position: relative;
+}
+.pone, .ptwo {
+	width: 100px;
+	height: 150px;
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+}
+.ptwo
+{
+	width: 150px;
+}
+.debug
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.debug > div 
+{
+	display: block;
+}
+.debug span 
+{
+	display: block;
+}
+
+.preload
+{
+	display: none;
+}
