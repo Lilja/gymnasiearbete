@@ -1,0 +1,22 @@
+@charset: "utf-8";
+div.winningScreen
+{
+	font-family: Myriad Pro;
+	border: 1px solid black;
+	text-align: center;
+	width: 50%;
+	position: absolute;
+	top: -50%;
+	left: 25%;
+	background-color: brown;
+}
+div.winningScreen > p
+{
+	display: inline-block;
+}
+span.playAgain
+{
+	background-color: chocolate;
+	border: 1px solid black;
+	cursor: pointer;
+}

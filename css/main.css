@@ -51,6 +51,10 @@
 	color: rgba(0,0,0,0);
 
 }
+.ptwo > .healthBar
+{
+	margin: 0 auto;
+}
 .healthBar > span.bar
 {
 	width: 100px;

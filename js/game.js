@@ -7,6 +7,8 @@ this.disabler = false;
 this.poneDisabler;
 this.ptwoDisabler;
 
+this.gameStoped = false;
+this.Winner;
 this.construct = function()
 {
   this.poneDisabler = false;
@@ -33,6 +35,12 @@ Game.prototype.initialize = function()
 
     $(".pone").addClass("hero1Idle"+ player1.Facing);
     $(".ptwo").addClass("hero2Idle"+ player2.Facing);
+
+    var widthA = $(".pone > .healthBar").width();
+    var widthB = $(".pone > .healthBar > .bar").width();
+
+    $(".ptwo > .healthBar").width(widthA);
+    $(".ptwo > .healthBar > .bar").width(widthB);
 }
 Game.prototype.update = function(playerP)
 {
@@ -63,6 +71,10 @@ Game.prototype.update = function(playerP)
     $(".pone > .healthBar > .bar").css({
       'width': player1.Health + "px"
     });
+    $(".ptwo > .healthBar > .bar").css({
+      'width': player2.Health + "px"
+    });
+
   if (player1.moveDisabler === true){}
   else if(player1.moveDisabler === false)
   {
@@ -104,13 +116,36 @@ Game.prototype.update = function(playerP)
         </div>*/
   if (player1.Health <= 0 || player2.Health <= 0)
   {
+    this.Winner = game.WhoWon();
     game.stopGame();
+    
   }
 }//update
 
 Game.prototype.draw = function()
 {
 
+}
+Game.prototype.WhoWon = function()
+{
+  if (player1.Health > player2.Health)
+  {//pone won!
+    return "spelare ett";
+  }
+  else if (player2.Health > player1.Health)
+  {//ptwo won!
+    return "spelare två";
+  }
+}
+Game.prototype.AfterGame = function(winner)
+{
+  $(".winningScreen > span.winner").text(" " + winner);
+  $(".winningScreen").animate({
+    "top": "40%",
+    easing: "swing"
+  },1000, function(){
+    console.log(winner);
+  });
 }
 Game.prototype.run = function()
 {
@@ -122,10 +157,10 @@ Game.prototype.stopGame = function()
 	clearInterval(t);
 	console.log("game stoped");
   this.disabler = true;
+  this.gameStoped = true;
+  game.AfterGame(game.Winner);
 }
 Game.prototype.playerCollision = function(p1x, p2x, p1h, p2h)
 {
   return !((p1x + p1h) < (p2x) ||(p1x > (p2x + p2h)));  
 }
-
-
