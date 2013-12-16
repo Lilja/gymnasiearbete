@@ -111,7 +111,7 @@
 	background-image:url("../img/char/hero1/walk_hero1_left.png");
 	width: 100px;
 	height:  150px;
-	-webkit-animation: heroOnewalk_left 0.5s steps(4);
+	-webkit-animation: heroOnewalk_left 0.5s steps(4) infinite;
 }
 @-webkit-keyframes heroOnewalk_left
 {
@@ -129,7 +129,7 @@
 	background-image:url("../img/char/hero1/walk_hero1_right.png");
 	width: 100px;
 	height:  150px;
-	-webkit-animation: heroOnewalk_right 0.5s steps(5);
+	-webkit-animation: heroOnewalk_right 0.5s steps(5) infinite;
 }
 @-webkit-keyframes heroOnewalk_right
 {

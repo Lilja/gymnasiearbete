@@ -4,6 +4,7 @@ function Player(player, facing)
 	this.X = 50;
 	this.Y = 50;
 
+	this.Amplifier = 0;
 	this.moveDisabler = false;
 
 	this.Facing = facing;
@@ -32,7 +33,7 @@ Player.prototype.moveRight = function(playerClass, player)
 }
 Player.prototype.Kick = function(playerAttack, Victim, victimP, attackerDisabler)
 {
-	var tempX = 150;//how much to move when kicked
+	var tempX = 250;//how much to move when kicked
 	if(Victim.X  > windowObj.Left && Victim.X + Victim.Width < windowObj.Right)
 	{
 		if (Victim.X - tempX > windowObj.Left && Victim.X + tempX + Victim.Width < windowObj.Right)

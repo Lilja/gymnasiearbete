@@ -10,7 +10,7 @@
 104 num8
 105 num9
 96 num0
-88 x
+88 X
 */
 $(document).keydown(function(e)
 {
@@ -107,6 +107,27 @@ $(document).keyup(function(e)
   var code = e.which;
   if (mapMove[code] === true && interval[code])
   {
+    switch(code)
+    {
+      case 39://höger
+        $(".ptwo").removeClass(player2.Char + "Walk" + player2.Facing);
+        $(".ptwo").addClass(player2.Char + "Idle" + player2.Facing);
+        console.log("case 39");
+      break;
+      case 37://vänster
+        console.log("case 37");
+        $(".ptwo").removeClass(player2.Char + "Walk" + player2.Facing);
+        $(".ptwo").addClass(player2.Char + "Idle" + player2.Facing);
+      break;
+      case 86://v
+        $(".pone").removeClass(player1.Char + "Walk" + player1.Facing);
+        $(".pone").addClass(player1.Char + "Idle" + player1.Facing);
+      break;
+      case 67://c
+        $(".pone").removeClass(player1.Char + "Walk" + player1.Facing);
+        $(".pone").addClass(player1.Char + "Idle" + player1.Facing);
+      break;
+    }
     clearInterval(interval[code]);
     interval[code] = null;
     mapMove[code] = false;
