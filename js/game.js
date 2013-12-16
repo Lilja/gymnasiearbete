@@ -8,7 +8,7 @@ this.poneDisabler;
 this.ptwoDisabler;
 
 this.gameStoped = false;
-this.Winner;
+this.WinnerObject;
 this.construct = function()
 {
   this.poneDisabler = false;
@@ -116,7 +116,7 @@ Game.prototype.update = function(playerP)
         </div>*/
   if (player1.Health <= 0 || player2.Health <= 0)
   {
-    this.Winner = game.WhoWon();
+    this.WinnerObject = game.WhoWon();
     game.stopGame();
     
   }
@@ -130,21 +130,32 @@ Game.prototype.WhoWon = function()
 {
   if (player1.Health > player2.Health)
   {//pone won!
-    return "spelare ett";
+    player1.TimesWon++;
+    return{
+            "vinnare": "spelare ett",
+            "spelare": player1,
+            "class": ".wPone"
+          };
   }
   else if (player2.Health > player1.Health)
   {//ptwo won!
-    return "spelare två";
+    player2.TimesWon++;
+    return{
+            "vinnare": "spelare två",
+            "spelare": player2,
+            "class": ".wPtwo"
+          };
   }
 }
-Game.prototype.AfterGame = function(winner)
+Game.prototype.AfterGame = function(winner, cssClass, playerobject)
 {
   $(".winningScreen > span.winner").text(" " + winner);
+  $(cssClass).html(playerobject.TimesWon);
+
   $(".winningScreen").animate({
     "top": "40%",
     easing: "swing"
   },1000, function(){
-    console.log(winner);
   });
 }
 Game.prototype.run = function()
@@ -158,9 +169,43 @@ Game.prototype.stopGame = function()
 	console.log("game stoped");
   this.disabler = true;
   this.gameStoped = true;
-  game.AfterGame(game.Winner);
+  game.AfterGame(game.WinnerObject["vinnare"], game.WinnerObject["class"], game.WinnerObject["spelare"]);
 }
+Game.prototype.ResetGame = function()
+{
+  game.WinnerObject = undefined;
+
+  player2.X = windowObj.Right - 200;
+  player1.X = $(".pone").width();
+
+  player1.Health = 100;
+  player2.Health = 100;
+
+  game.disabler = false;
+  game.gameStoped = false;
+
+  t = setInterval(game.run, 1000/this.fps);
+}
+
 Game.prototype.playerCollision = function(p1x, p2x, p1h, p2h)
 {
-  return !((p1x + p1h) < (p2x) ||(p1x > (p2x + p2h)));  
+  
+  if (!((p1x + p1h) < (p2x) ||(p1x > (p2x + p2h))))
+  {
+    $(".ptwo > .healthBar").css(
+    {
+      "position": "absolute",
+      "top": "-15px",
+      "left": (($(".ptwo").width() - $(".ptwo > .healthBar").width())/2)
+    });
+  }
+  else 
+  {
+    $(".ptwo > .healthBar").css(
+    {
+      "position": "static"
+    });
+  }
+  return !((p1x + p1h) < (p2x) ||(p1x > (p2x + p2h)));
+  
 }

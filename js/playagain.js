@@ -5,8 +5,7 @@ $(function(){
 			"top": "-50%"
 		},1000, function()
 		{
-			location.reload();	
+			game.ResetGame();
 		});
-		//123
 	});
 });

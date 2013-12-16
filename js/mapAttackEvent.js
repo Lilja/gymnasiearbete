@@ -13,7 +13,7 @@ if(!game.disabler)
           if(mapAttack[87] === false && mapAttack[69] === false)
           {
             player1.isAttacking = true;
-            if(typeof timeSinceLastAttackP1 === "undefined" || (timeSinceLastAttackP1 + 500 < Date.now()))
+            if(typeof timeSinceLastAttackP1 === "undefined" || (timeSinceLastAttackP1 + 1000 < Date.now()))
             {
               if(player1.isAttacking === true)
               {
@@ -34,7 +34,7 @@ if(!game.disabler)
           if(mapAttack[81] === false && mapAttack[69] === false)
           {
             player1.isAttacking = true;
-            if(typeof timeSinceLastAttackP1 === "undefined" || (timeSinceLastAttackP1 + 10000 < Date.now()))
+            if(typeof timeSinceLastAttackP1 === "undefined" || (timeSinceLastAttackP1 + 1000 < Date.now()))
             {
               if(player1.isAttacking === true)
               {

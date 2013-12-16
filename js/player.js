@@ -12,6 +12,8 @@ function Player(player, facing)
 	this.Height = 150;
 
 	this.Char = player;
+
+	this.TimesWon = 0;
 	if(player === "hero2")
 	{
 		this.Width = 150;

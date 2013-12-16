@@ -31,6 +31,7 @@ $(document).keydown(function(e)
             {
               if(player2.X + player2.Width < windowObj.Right)
               {
+                game.playerCollision(player1.X, player2.X, player1.Width, player2.Width)
                 $(".ptwo").removeClass("hero2Idleright");
                 $(".ptwo").removeClass("hero2Idleleft");
                 player2.Facing = "right";
@@ -47,6 +48,7 @@ $(document).keydown(function(e)
             {
               if(player2.X  > windowObj.Left)
               {
+                game.playerCollision(player1.X, player2.X, player1.Width, player2.Width)
                 $(".ptwo").removeClass("hero2Idleright");
                 $(".ptwo").removeClass("hero2Idleleft");
                 player2.Facing = "left";
@@ -63,6 +65,7 @@ $(document).keydown(function(e)
             {
               if(player1.X + player2.Width < windowObj.Right)
               {
+                  game.playerCollision(player1.X, player2.X, player1.Width, player2.Width)
                   $(".pone").removeClass("hero1Idleright");
                   $(".pone").removeClass("hero1Idleleft");
                   player1.Facing = "right";
@@ -79,6 +82,7 @@ $(document).keydown(function(e)
             {
               if(player1.X  > windowObj.Left)
               {
+                  game.playerCollision(player1.X, player2.X, player1.Width, player2.Width)
                   $(".pone").removeClass("hero1Idleright");
                   $(".pone").removeClass("hero1Idleleft");
                   player1.Facing = "left";

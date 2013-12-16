@@ -20,3 +20,17 @@ span.playAgain
 	border: 1px solid black;
 	cursor: pointer;
 }
+.winContainer
+{
+	width: 50%;
+	margin: 0 auto;
+}
+.winningCount
+{
+	width: 49%;
+	display: inline-block;
+}
+div.ptwoW
+{
+	text-align: right;
+}
