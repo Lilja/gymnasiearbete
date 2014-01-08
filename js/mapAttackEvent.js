@@ -23,7 +23,7 @@ if(!game.disabler)
                   if(!player2.isDodging)
                   {
                     player1.Kick(player1, player2, ".ptwo", game.p2Disabler);
-                    player2.Health = player2.Health - 7 - player1.Amplifier;
+                    player2.Health = player2.Health - 9 - player1.Amplifier;
                     player1.Amplifier = 1;
                     timeSinceLastAttackP1 = Date.now();
                   }//is dodging
