@@ -10,7 +10,7 @@
 104 num8
 105 num9
 96 num0
-88 x
+88 X
 */
 $(document).keydown(function(e)
 {
@@ -31,6 +31,7 @@ $(document).keydown(function(e)
             {
               if(player2.X + player2.Width < windowObj.Right)
               {
+                game.playerCollision(player1.X, player2.X, player1.Width, player2.Width)
                 $(".ptwo").removeClass("hero2Idleright");
                 $(".ptwo").removeClass("hero2Idleleft");
                 player2.Facing = "right";
@@ -47,6 +48,7 @@ $(document).keydown(function(e)
             {
               if(player2.X  > windowObj.Left)
               {
+                game.playerCollision(player1.X, player2.X, player1.Width, player2.Width)
                 $(".ptwo").removeClass("hero2Idleright");
                 $(".ptwo").removeClass("hero2Idleleft");
                 player2.Facing = "left";
@@ -63,6 +65,7 @@ $(document).keydown(function(e)
             {
               if(player1.X + player2.Width < windowObj.Right)
               {
+                  game.playerCollision(player1.X, player2.X, player1.Width, player2.Width)
                   $(".pone").removeClass("hero1Idleright");
                   $(".pone").removeClass("hero1Idleleft");
                   player1.Facing = "right";
@@ -79,6 +82,7 @@ $(document).keydown(function(e)
             {
               if(player1.X  > windowObj.Left)
               {
+                  game.playerCollision(player1.X, player2.X, player1.Width, player2.Width)
                   $(".pone").removeClass("hero1Idleright");
                   $(".pone").removeClass("hero1Idleleft");
                   player1.Facing = "left";
@@ -103,6 +107,27 @@ $(document).keyup(function(e)
   var code = e.which;
   if (mapMove[code] === true && interval[code])
   {
+    switch(code)
+    {
+      case 39://höger
+        $(".ptwo").removeClass(player2.Char + "Walk" + player2.Facing);
+        $(".ptwo").addClass(player2.Char + "Idle" + player2.Facing);
+        console.log("case 39");
+      break;
+      case 37://vänster
+        console.log("case 37");
+        $(".ptwo").removeClass(player2.Char + "Walk" + player2.Facing);
+        $(".ptwo").addClass(player2.Char + "Idle" + player2.Facing);
+      break;
+      case 86://v
+        $(".pone").removeClass(player1.Char + "Walk" + player1.Facing);
+        $(".pone").addClass(player1.Char + "Idle" + player1.Facing);
+      break;
+      case 67://c
+        $(".pone").removeClass(player1.Char + "Walk" + player1.Facing);
+        $(".pone").addClass(player1.Char + "Idle" + player1.Facing);
+      break;
+    }
     clearInterval(interval[code]);
     interval[code] = null;
     mapMove[code] = false;

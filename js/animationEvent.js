@@ -15,26 +15,29 @@ if (mapAnimate[code] === false)
 
 		case 81://Q
 		//animation för Q för spelare 1
-			mapAnimate[code] = true;
-			$(".pone").addClass("attacking");
-			$(".pone").removeClass("hero1Idleright");
-		 	$(".pone").removeClass("hero1Idleleft");
-			$(".pone").addClass(player1.Char + "Attack1" + player1.Facing);
-
+			if (attackAllowed[code] === true)
+			{
+				mapAnimate[code] = true;
+				$(".pone").addClass("attacking");
+				$(".pone").removeClass("hero1Idleright");
+			 	$(".pone").removeClass("hero1Idleleft");
+				$(".pone").addClass(player1.Char + "Attack1" + player1.Facing);
+			}
 		break;
 		case 87://W
 			//animation för W för spelare 1
-
-			mapAnimate[code] = true;
-			$(".pone").addClass("attacking");
-			$(".pone").removeClass("hero1Idleright");
-		 	$(".pone").removeClass("hero1Idleleft");
-			$(".pone").addClass(player1.Char + "Attack2" + player1.Facing);
-
+			if (attackAllowed[code] === true)
+			{
+				mapAnimate[code] = true;
+				$(".pone").addClass("attacking");
+				$(".pone").removeClass("hero1Idleright");
+			 	$(".pone").removeClass("hero1Idleleft");
+				$(".pone").addClass(player1.Char + "Attack2" + player1.Facing);
+			}
 		break;
 		case 69://E
 			//animation för E för spelare 1
-			if (attackAllowed[69] === true)
+			if (attackAllowed[code] === true)
 			{
 				mapAnimate[code] = true;
 				$(".pone").addClass("attacking");
@@ -45,32 +48,38 @@ if (mapAnimate[code] === false)
 		break;
 		case 103://num7
 			//animation för num7 för spelare 2
-
-			mapAnimate[code] = true;
-			$(".ptwo").addClass("attacking");
-			$(".ptwo").removeClass("hero2Idleright");
-            $(".ptwo").removeClass("hero2Idleleft");
-			$(".ptwo").addClass(player2.Char + "Attack1" + player2.Facing);
+			if (attackAllowed[code] === true)
+			{
+				mapAnimate[code] = true;
+				$(".ptwo").addClass("attacking");
+				$(".ptwo").removeClass("hero2Idleright");
+	            $(".ptwo").removeClass("hero2Idleleft");
+				$(".ptwo").addClass(player2.Char + "Attack1" + player2.Facing);
+			};
 
 		break;
 		case 104://num8
 			//animation för num8 för spelare 2
-
-			mapAnimate[code] = true;
-			$(".ptwo").addClass("attacking");
-			$(".ptwo").removeClass("hero2Idleright");
-            $(".ptwo").removeClass("hero2Idleleft");
-			$(".ptwo").addClass(player2.Char + "Attack2" + player2.Facing);
+			if (attackAllowed[code] === true)
+			{
+				mapAnimate[code] = true;
+				$(".ptwo").addClass("attacking");
+				$(".ptwo").removeClass("hero2Idleright");
+	            $(".ptwo").removeClass("hero2Idleleft");
+				$(".ptwo").addClass(player2.Char + "Attack2" + player2.Facing);
+			}
 
 		break;
 		case 105://num9
 			//animation för num9 för spelare 2
-
-			mapAnimate[code] = true;
-			$(".ptwo").addClass("attacking");
-			$(".ptwo").removeClass("hero2Idleright");
-            $(".ptwo").removeClass("hero2Idleleft");
-			$(".ptwo").addClass(player2.Char + "Attack3" + player2.Facing);
+			if (attackAllowed[code] === true)
+			{
+				mapAnimate[code] = true;
+				$(".ptwo").addClass("attacking");
+				$(".ptwo").removeClass("hero2Idleright");
+	            $(".ptwo").removeClass("hero2Idleleft");
+				$(".ptwo").addClass(player2.Char + "Attack3" + player2.Facing);
+			}
 
 		break;
 

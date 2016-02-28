@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/animations_hero1.css">
         <link rel="stylesheet" href="css/animations_hero2.css">
+        <link rel="stylesheet" type="text/css" href="css/winningscreen.css">
     </head>
     <body>
     <!--
@@ -49,20 +50,35 @@
     		</div>
     		<div class="pone">
     			<div class="healthBar poneB">
-                    <span class="bar">1123123123</span>     
+                    <span class="bar">wow such hidden message</span>     
                 </div>
     		</div>
     		<div class="ptwo">
     			<div class="healthBar ptwoB">
-                    <span class="bar">1</span>    
-                    <span class="pusher">2</span>    
+                    <span class="bar">wow such hidden message</span>  
                 </div>
     		</div>
     	</div>
+        <section class="winContainer">
+            <div class="winningCount poneW">
+                <span>Vinster: </span><span class="wPone">0</span>
+            </div>
+
+            <div class="winningCount ptwoW">
+                <span>Vinster: </span><span class="wPtwo">0</span>
+            </div>
+        </section>
+        <div class="winningScreen">
+            <h1>Vi har en vinnare!</h1>
+            <p>Stort grattis, </p><span class="winner"></span>
+            <br>
+            <span class="playAgain">Spela igen?</span>
+        </div>
         <script type="text/javascript">
         var t;//something with intervals, keep!
         var timeSinceLastAttackP1;
         var timeSinceLastAttackP2;
+
         var mapMove = {39: false, 37: false, 67: false, 86: false};
         var attackAllowed = {81: true, 87: true, 69: true, 103: true, 104: true, 105: true};
         var mapAttack = {81: false, 87: false, 69: false, 103: false, 104: false, 105: false};
@@ -81,6 +97,7 @@
         <script type="text/javascript" src="js/window.js"></script>
         <script type="text/javascript" src="js/animationDone.js"></script>
         <script type="text/javascript">
+        //$(".preload").preload();
         var windowObj = new Window();
         var game = new Game();
         var player1 = new Player("hero1", "right");
@@ -96,6 +113,7 @@
         <script type="text/javascript" src="js/mapAttackEvent.js"></script>
         <script type="text/javascript" src="js/animationEvent.js"></script>
         <script type="text/javascript" src="js/mapDodge.js"></script>
+        <script type="text/javascript" src="js/playagain.js"></script>
         <div class="preload"></div>
     </body>
 </html>
