@@ -86,7 +86,7 @@ Game.prototype.update = function(playerP)
   {
     $(".ptwo").css("left", player2.X);
   }
-  
+
   if (player1.isAttacking === true)
   {
     $(".pone > p").css("backgroundColor", "red");
@@ -118,7 +118,7 @@ Game.prototype.update = function(playerP)
   {
     this.WinnerObject = game.WhoWon();
     game.stopGame();
-    
+
   }
 }//update
 
@@ -189,7 +189,7 @@ Game.prototype.ResetGame = function()
 
 Game.prototype.playerCollision = function(p1x, p2x, p1h, p2h)
 {
-  
+
   if (!((p1x + p1h) < (p2x) ||(p1x > (p2x + p2h))))
   {
     $(".ptwo > .healthBar").css(
@@ -199,7 +199,7 @@ Game.prototype.playerCollision = function(p1x, p2x, p1h, p2h)
       "left": (($(".ptwo").width() - $(".ptwo > .healthBar").width())/2)
     });
   }
-  else 
+  else
   {
     $(".ptwo > .healthBar").css(
     {
@@ -207,5 +207,5 @@ Game.prototype.playerCollision = function(p1x, p2x, p1h, p2h)
     });
   }
   return !((p1x + p1h) < (p2x) ||(p1x > (p2x + p2h)));
-  
+
 }
