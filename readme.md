@@ -1,7 +1,6 @@
 #Erik Lilja TE3A
 #12-12/2013
 
-#Det här är mitt gymnasiearbete för
 #Frågeställning:
 Är JavaScript, tillsammans med PHP pch MySQL dugliga verktyg för spelutveckling?
 
