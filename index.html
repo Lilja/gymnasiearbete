@@ -9,53 +9,18 @@
         <link rel="stylesheet" type="text/css" href="css/winningscreen.css">
     </head>
     <body>
-    <!--
-    <div class="debug">
-        <div class="p1">
-            <h1>Player1</h1>
-            <span class="p1x"></span>
-            <span class="p1y"></span>
-            <span class="p1l"></span>
-            <span class="p1r"></span>
-            <span class="p1f"></span>
-            <span class="p1c"></span>
-            <span class="p1hh"></span>
-            <span class="p1he"></span>
-            <span class="p1wi"></span>
-            <span class="p1d"></span>
-            <span class="p1a"></span>
-        </div>
-        <div class="p2">
-            <h1>Player2</h1>
-            <span class="p2x"></span>
-            <span class="p2y"></span>
-            <span class="p2l"></span>
-            <span class="p2r"></span>
-            <span class="p2f"></span>
-            <span class="p2c"></span>
-            <span class="p2hh"></span>
-            <span class="p2he"></span>
-            <span class="p2wi"></span>
-            <span class="p2d"></span>
-            <span class="p2a"></span>
-        </div>
-        <h1>Window</h1>
-        <span class="wLeft"></span>
-        <span class="wRight"></span>
-    </div>
-    -->
     	<div class="window">
     		<div class="background">
-    			
+
     		</div>
     		<div class="pone">
     			<div class="healthBar poneB">
-                    <span class="bar">wow such hidden message</span>     
+                    <span class="bar"></span>
                 </div>
     		</div>
     		<div class="ptwo">
     			<div class="healthBar ptwoB">
-                    <span class="bar">wow such hidden message</span>  
+                    <span class="bar"></span>
                 </div>
     		</div>
     	</div>
@@ -87,17 +52,13 @@
         var interval = {};
         </script>
         <script type="text/javascript" src="js/lib/jquery.js"></script>
-        <!--
-                <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
-                Behövs ej
-        -->
+
         <script type="text/javascript" src="js/preload.js"></script>
         <script type="text/javascript" src="js/game.js"></script>
         <script type="text/javascript" src="js/player.js"></script>
         <script type="text/javascript" src="js/window.js"></script>
         <script type="text/javascript" src="js/animationDone.js"></script>
         <script type="text/javascript">
-        //$(".preload").preload();
         var windowObj = new Window();
         var game = new Game();
         var player1 = new Player("hero1", "right");
